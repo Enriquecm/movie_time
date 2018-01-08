@@ -8,11 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		AD1489E71FFFAD3400D01259 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1489E61FFFAD3400D01259 /* AppDelegate.swift */; };
-		AD1489E91FFFAD3400D01259 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1489E81FFFAD3400D01259 /* ViewController.swift */; };
+		AD1489E91FFFAD3400D01259 /* MTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1489E81FFFAD3400D01259 /* MTViewController.swift */; };
 		AD1489EC1FFFAD3400D01259 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1489EA1FFFAD3400D01259 /* Main.storyboard */; };
 		AD1489EE1FFFAD3400D01259 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD1489ED1FFFAD3400D01259 /* Assets.xcassets */; };
 		AD1489F11FFFAD3400D01259 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1489EF1FFFAD3400D01259 /* LaunchScreen.storyboard */; };
 		AD1489FC1FFFAD3400D01259 /* MovieTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1489FB1FFFAD3400D01259 /* MovieTimeTests.swift */; };
+		AD6E5CCC2003AF1B0084EB1E /* MTCoreUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CCB2003AF1B0084EB1E /* MTCoreUtils.swift */; };
+		AD6E5CCE2003AF500084EB1E /* MTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CCD2003AF500084EB1E /* MTService.swift */; };
+		AD6E5CD32003C4AB0084EB1E /* MTResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CD22003C4AB0084EB1E /* MTResponse.swift */; };
+		AD6E5CD52003C5180084EB1E /* MTNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CD42003C5180084EB1E /* MTNetworkError.swift */; };
+		AD6E5CD72003CEA80084EB1E /* MTParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CD62003CEA80084EB1E /* MTParameterEncoding.swift */; };
+		AD6E5CD92003D43B0084EB1E /* MTMovieDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CD82003D43B0084EB1E /* MTMovieDBService.swift */; };
+		AD6E5CDB2003D7670084EB1E /* MTServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CDA2003D7670084EB1E /* MTServiceHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +35,7 @@
 /* Begin PBXFileReference section */
 		AD1489E31FFFAD3400D01259 /* MovieTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1489E61FFFAD3400D01259 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD1489E81FFFAD3400D01259 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD1489E81FFFAD3400D01259 /* MTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTViewController.swift; sourceTree = "<group>"; };
 		AD1489EB1FFFAD3400D01259 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD1489ED1FFFAD3400D01259 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD1489F01FFFAD3400D01259 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +43,13 @@
 		AD1489F71FFFAD3400D01259 /* MovieTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1489FB1FFFAD3400D01259 /* MovieTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTimeTests.swift; sourceTree = "<group>"; };
 		AD1489FD1FFFAD3400D01259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD6E5CCB2003AF1B0084EB1E /* MTCoreUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTCoreUtils.swift; sourceTree = "<group>"; };
+		AD6E5CCD2003AF500084EB1E /* MTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTService.swift; sourceTree = "<group>"; };
+		AD6E5CD22003C4AB0084EB1E /* MTResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTResponse.swift; sourceTree = "<group>"; };
+		AD6E5CD42003C5180084EB1E /* MTNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTNetworkError.swift; sourceTree = "<group>"; };
+		AD6E5CD62003CEA80084EB1E /* MTParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTParameterEncoding.swift; sourceTree = "<group>"; };
+		AD6E5CD82003D43B0084EB1E /* MTMovieDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMovieDBService.swift; sourceTree = "<group>"; };
+		AD6E5CDA2003D7670084EB1E /* MTServiceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTServiceHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +92,11 @@
 			isa = PBXGroup;
 			children = (
 				AD1489E61FFFAD3400D01259 /* AppDelegate.swift */,
-				AD1489E81FFFAD3400D01259 /* ViewController.swift */,
-				AD1489EA1FFFAD3400D01259 /* Main.storyboard */,
+				AD6E5CCA2003AEF50084EB1E /* Core */,
+				AD148A061FFFB52500D01259 /* Service */,
+				AD148A071FFFB53200D01259 /* Model */,
+				AD148A081FFFB53A00D01259 /* View */,
+				AD6E5CC92003AEC60084EB1E /* User Interfaces */,
 				AD1489ED1FFFAD3400D01259 /* Assets.xcassets */,
 				AD1489EF1FFFAD3400D01259 /* LaunchScreen.storyboard */,
 				AD1489F21FFFAD3400D01259 /* Info.plist */,
@@ -94,6 +111,58 @@
 				AD1489FD1FFFAD3400D01259 /* Info.plist */,
 			);
 			path = MovieTimeTests;
+			sourceTree = "<group>";
+		};
+		AD148A061FFFB52500D01259 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AD6E5CCD2003AF500084EB1E /* MTService.swift */,
+				AD6E5CD62003CEA80084EB1E /* MTParameterEncoding.swift */,
+				AD6E5CD82003D43B0084EB1E /* MTMovieDBService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AD148A071FFFB53200D01259 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD6E5CD12003C49D0084EB1E /* Services */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AD148A081FFFB53A00D01259 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD6E5CDE2003E4B00084EB1E /* Feed */,
+				AD1489E81FFFAD3400D01259 /* MTViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD6E5CCA2003AEF50084EB1E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AD6E5CCB2003AF1B0084EB1E /* MTCoreUtils.swift */,
+				AD6E5CD42003C5180084EB1E /* MTNetworkError.swift */,
+				AD6E5CDA2003D7670084EB1E /* MTServiceHelper.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AD6E5CD12003C49D0084EB1E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AD6E5CD22003C4AB0084EB1E /* MTResponse.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AD6E5CDE2003E4B00084EB1E /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +209,7 @@
 		AD1489DB1FFFAD3300D01259 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MT;
 				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Choynowski;
@@ -199,7 +269,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD1489E91FFFAD3400D01259 /* ViewController.swift in Sources */,
+				AD6E5CCE2003AF500084EB1E /* MTService.swift in Sources */,
+				AD6E5CD92003D43B0084EB1E /* MTMovieDBService.swift in Sources */,
+				AD6E5CCC2003AF1B0084EB1E /* MTCoreUtils.swift in Sources */,
+				AD1489E91FFFAD3400D01259 /* MTViewController.swift in Sources */,
+				AD6E5CD52003C5180084EB1E /* MTNetworkError.swift in Sources */,
+				AD6E5CD32003C4AB0084EB1E /* MTResponse.swift in Sources */,
+				AD6E5CD72003CEA80084EB1E /* MTParameterEncoding.swift in Sources */,
+				AD6E5CDB2003D7670084EB1E /* MTServiceHelper.swift in Sources */,
 				AD1489E71FFFAD3400D01259 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
