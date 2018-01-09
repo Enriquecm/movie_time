@@ -20,6 +20,12 @@
 		AD6E5CD72003CEA80084EB1E /* MTParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CD62003CEA80084EB1E /* MTParameterEncoding.swift */; };
 		AD6E5CD92003D43B0084EB1E /* MTMovieDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CD82003D43B0084EB1E /* MTMovieDBService.swift */; };
 		AD6E5CDB2003D7670084EB1E /* MTServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CDA2003D7670084EB1E /* MTServiceHelper.swift */; };
+		AD6E5CE02003E4D80084EB1E /* MTMoviesFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CDF2003E4D80084EB1E /* MTMoviesFeedViewController.swift */; };
+		AD6E5CE22003E4E60084EB1E /* MTMoviesFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CE12003E4E60084EB1E /* MTMoviesFeedViewModel.swift */; };
+		AD6E5CE42003FC270084EB1E /* MTSearchMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CE32003FC270084EB1E /* MTSearchMoviesViewController.swift */; };
+		AD6E5CE7200412A10084EB1E /* MTMovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CE6200412A10084EB1E /* MTMovieCollectionViewCell.swift */; };
+		AD6E5CE9200413CE0084EB1E /* MTMovieCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CE8200413CE0084EB1E /* MTMovieCellViewModel.swift */; };
+		AD6E5CEC20045FCD0084EB1E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CEB20045FCD0084EB1E /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +56,12 @@
 		AD6E5CD62003CEA80084EB1E /* MTParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTParameterEncoding.swift; sourceTree = "<group>"; };
 		AD6E5CD82003D43B0084EB1E /* MTMovieDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMovieDBService.swift; sourceTree = "<group>"; };
 		AD6E5CDA2003D7670084EB1E /* MTServiceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTServiceHelper.swift; sourceTree = "<group>"; };
+		AD6E5CDF2003E4D80084EB1E /* MTMoviesFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMoviesFeedViewController.swift; sourceTree = "<group>"; };
+		AD6E5CE12003E4E60084EB1E /* MTMoviesFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMoviesFeedViewModel.swift; sourceTree = "<group>"; };
+		AD6E5CE32003FC270084EB1E /* MTSearchMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTSearchMoviesViewController.swift; sourceTree = "<group>"; };
+		AD6E5CE6200412A10084EB1E /* MTMovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		AD6E5CE8200413CE0084EB1E /* MTMovieCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMovieCellViewModel.swift; sourceTree = "<group>"; };
+		AD6E5CEB20045FCD0084EB1E /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,9 +152,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		AD6E5CC92003AEC60084EB1E /* User Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				AD1489EA1FFFAD3400D01259 /* Main.storyboard */,
+			);
+			path = "User Interfaces";
+			sourceTree = "<group>";
+		};
 		AD6E5CCA2003AEF50084EB1E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				AD6E5CEA20045FC20084EB1E /* Extensions */,
 				AD6E5CCB2003AF1B0084EB1E /* MTCoreUtils.swift */,
 				AD6E5CD42003C5180084EB1E /* MTNetworkError.swift */,
 				AD6E5CDA2003D7670084EB1E /* MTServiceHelper.swift */,
@@ -161,8 +182,29 @@
 		AD6E5CDE2003E4B00084EB1E /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				AD6E5CE12003E4E60084EB1E /* MTMoviesFeedViewModel.swift */,
+				AD6E5CDF2003E4D80084EB1E /* MTMoviesFeedViewController.swift */,
+				AD6E5CE32003FC270084EB1E /* MTSearchMoviesViewController.swift */,
+				AD6E5CE52004127B0084EB1E /* Cells */,
 			);
 			path = Feed;
+			sourceTree = "<group>";
+		};
+		AD6E5CE52004127B0084EB1E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AD6E5CE8200413CE0084EB1E /* MTMovieCellViewModel.swift */,
+				AD6E5CE6200412A10084EB1E /* MTMovieCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AD6E5CEA20045FC20084EB1E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AD6E5CEB20045FCD0084EB1E /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,13 +312,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD6E5CCE2003AF500084EB1E /* MTService.swift in Sources */,
+				AD6E5CEC20045FCD0084EB1E /* UIViewExtensions.swift in Sources */,
 				AD6E5CD92003D43B0084EB1E /* MTMovieDBService.swift in Sources */,
+				AD6E5CE42003FC270084EB1E /* MTSearchMoviesViewController.swift in Sources */,
+				AD6E5CE22003E4E60084EB1E /* MTMoviesFeedViewModel.swift in Sources */,
+				AD6E5CE02003E4D80084EB1E /* MTMoviesFeedViewController.swift in Sources */,
 				AD6E5CCC2003AF1B0084EB1E /* MTCoreUtils.swift in Sources */,
+				AD6E5CE9200413CE0084EB1E /* MTMovieCellViewModel.swift in Sources */,
 				AD1489E91FFFAD3400D01259 /* MTViewController.swift in Sources */,
 				AD6E5CD52003C5180084EB1E /* MTNetworkError.swift in Sources */,
 				AD6E5CD32003C4AB0084EB1E /* MTResponse.swift in Sources */,
 				AD6E5CD72003CEA80084EB1E /* MTParameterEncoding.swift in Sources */,
 				AD6E5CDB2003D7670084EB1E /* MTServiceHelper.swift in Sources */,
+				AD6E5CE7200412A10084EB1E /* MTMovieCollectionViewCell.swift in Sources */,
 				AD1489E71FFFAD3400D01259 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
