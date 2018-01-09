@@ -15,12 +15,12 @@ final class MTMoviesFeedViewModel: MTViewModel {
     var isDeviceLandscape: Bool {
         return UIDevice.current.orientation.isLandscape
     }
+    private var shouldLoadNextPage = false
 
-    private var movies: [AnyObject]? {
+    private var movies: [MTModelMovieDBMovie] = [] {
         didSet {
             var viewModels = [MTMovieCellViewModel]()
-            // TODO:
-//            movies?.forEach({ viewModels.append(MTMoviesFeedViewModel(movie: $0)) })
+            movies.forEach({ viewModels.append(MTMovieCellViewModel(movie: $0)) })
             dataSource = viewModels
         }
     }
@@ -35,7 +35,7 @@ final class MTMoviesFeedViewModel: MTViewModel {
 
     // MARK: Reactors
     var onDataSourceChanged: (() -> Void)?
-    var onDataSourceFailed: ((Error?) -> Void)?
+    var onDataSourceFailed: ((String?) -> Void)?
     var onMovieSelected: ((MTMovieCellViewModel) -> Void)?
 
     internal let movieDbService: MTMovieDBServiceProtocol
@@ -44,8 +44,44 @@ final class MTMoviesFeedViewModel: MTViewModel {
         self.movieDbService = service
     }
 
-    func loadFeed() {
-        // TODO:
+    func loadFeed(forceRefresh: Bool = false) {
+        movieDbService.requestUpcomingMovies(forPage: currentPage) { [weak self] (data, error) in
+            guard let data = data, error == nil else {
+                self?.onDataSourceFailed?(error?.message)
+                return
+            }
+
+            // Parse Movies
+            let moviesParser = MTParser<MTModelMovieDBListResult>()
+            let resultFeed = try? moviesParser.parse(from: data, with: moviesParser.dateDecodingStrategy())
+            let moviesFeed = resultFeed?.results ?? []
+            if forceRefresh {
+                self?.movies = moviesFeed
+            } else {
+                self?.movies.append(contentsOf: moviesFeed)
+            }
+
+            if let page = resultFeed?.page, let totalPages = resultFeed?.total_pages {
+                self?.shouldLoadNextPage = page < totalPages
+            } else {
+                self?.shouldLoadNextPage = false
+            }
+        }
+    }
+
+    func refreshFeed() {
+        currentPage = 1
+        loadFeed(forceRefresh: true)
+    }
+
+    func fetchNextPage() {
+        currentPage += 1
+        loadFeed()
+    }
+
+    func isLoadingIndexPath(_ indexPath: IndexPath) -> Bool {
+        guard shouldLoadNextPage else { return false }
+        return indexPath.row == dataSource.count
     }
 
     // MARK: Data source methods
@@ -54,20 +90,29 @@ final class MTMoviesFeedViewModel: MTViewModel {
     }
 
     func numberOfItemsInSection(for section: Int) -> Int {
-        return dataSource.count
+        let items = dataSource.count
+        return shouldLoadNextPage ? items + 1 : items
     }
 
     func identifier(for indexPath: IndexPath) -> String {
-        return MTMovieCollectionViewCell.identifier
+        if isLoadingIndexPath(indexPath) {
+            return MTLoadingCollectionViewCell.identifier
+        } else {
+            return MTMovieCollectionViewCell.identifier
+        }
     }
 
     func data(for indexPath: IndexPath) -> MTMovieCellViewModel? {
+        guard isLoadingIndexPath(indexPath) else { return nil }
+
         let row = indexPath.row
         guard row < dataSource.count else { return nil }
         return dataSource[row]
     }
 
     func didSelectItem(at indexPath: IndexPath) {
+        guard isLoadingIndexPath(indexPath) else { return }
+
         guard let movie = data(for: indexPath) else { return }
         onMovieSelected?(movie)
     }

@@ -10,4 +10,7 @@ import Foundation
 
 final class MTMovieCellViewModel: MTViewModel {
 
+    init(movie: MTModelMovieDBMovie) {
+        // TODO:
+    }
 }

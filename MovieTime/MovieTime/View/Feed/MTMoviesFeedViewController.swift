@@ -28,7 +28,7 @@ class MTMoviesFeedViewController: UIViewController {
     // MARK: Properties
     fileprivate let viewModel = MTMoviesFeedViewModel()
 
-    private let refreshControl = UIRefreshControl()
+    private let refreshControl = MTRefreshControl()
     private var searchBar: UISearchBar?
     private var searchController: UISearchController?
 
@@ -79,9 +79,9 @@ class MTMoviesFeedViewController: UIViewController {
             }
         }
 
-        viewModel.onDataSourceFailed = { [weak self] error in
+        viewModel.onDataSourceFailed = { [weak self] errorMessage in
             DispatchQueue.main.async {
-                self?.showAlert(withTitle: "Failed to load movies.", message: error?.localizedDescription)
+                self?.showAlert(withTitle: "Failed to load movies.", message: errorMessage)
                 self?.refreshControl.endRefreshing()
             }
         }
@@ -179,11 +179,19 @@ extension MTMoviesFeedViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.didSelectItem(at: indexPath)
     }
+
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard viewModel.isLoadingIndexPath(indexPath) else { return }
+        viewModel.fetchNextPage()
+    }
 }
 
 extension MTMoviesFeedViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        guard !viewModel.isLoadingIndexPath(indexPath) else {
+            return CGSize(width: collectionView.bounds.width, height: MTLoadingCollectionViewCell.cellHeight)
+        }
 
         let totalWidth: CGFloat
         if viewModel.isDeviceLandscape {

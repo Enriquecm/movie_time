@@ -326,6 +326,24 @@
                                                     <outlet property="viewInfoBackground" destination="7Q9-P0-BDC" id="sfe-bP-snt"/>
                                                 </connections>
                                             </collectionViewCell>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MTLoadingCollectionViewCell" id="4rY-nU-7OU" customClass="MTLoadingCollectionViewCell" customModule="MovieTime" customModuleProvider="target">
+                                                <rect key="frame" x="80" y="250" width="160" height="240"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="240"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="N7Q-5N-1Mt">
+                                                            <rect key="frame" x="62" y="102" width="37" height="37"/>
+                                                            <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </activityIndicatorView>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstItem="N7Q-5N-1Mt" firstAttribute="centerY" secondItem="4rY-nU-7OU" secondAttribute="centerY" id="dI5-AI-VfH"/>
+                                                    <constraint firstItem="N7Q-5N-1Mt" firstAttribute="centerX" secondItem="4rY-nU-7OU" secondAttribute="centerX" id="hI5-6K-XyV"/>
+                                                </constraints>
+                                            </collectionViewCell>
                                         </cells>
                                     </collectionView>
                                 </subviews>
