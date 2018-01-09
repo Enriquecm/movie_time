@@ -8,7 +8,10 @@
 
 import UIKit
 
-class MTMovieCollectionViewCell: UICollectionViewCell {
+class MTMovieCollectionViewCell: UICollectionViewCell, MTViewModelSetupCellProtocol {
+
+    // MARK: Static Properties
+    static let informationHeight: CGFloat = 50.0
 
     // MARK: Outlets
     @IBOutlet weak var viewBackground: UIView!
@@ -25,4 +28,14 @@ class MTMovieCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageViewInfoFrame: UIImageView!
     @IBOutlet weak var labelMovieGenres: UILabel!
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        viewBackground.layer.shadowRadius = 1.0
+        viewBackground.layer.shadowOffset = CGSize(width: 3, height: 3)
+        viewBackground.layer.shadowOpacity = 0.7
+    }
+
+    func setup(withViewModel viewModel: MTMovieCellViewModel?) {
+        // TODO: 
+    }
 }

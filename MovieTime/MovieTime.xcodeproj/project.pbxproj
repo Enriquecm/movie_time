@@ -26,6 +26,9 @@
 		AD6E5CE7200412A10084EB1E /* MTMovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CE6200412A10084EB1E /* MTMovieCollectionViewCell.swift */; };
 		AD6E5CE9200413CE0084EB1E /* MTMovieCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CE8200413CE0084EB1E /* MTMovieCellViewModel.swift */; };
 		AD6E5CEC20045FCD0084EB1E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CEB20045FCD0084EB1E /* UIViewExtensions.swift */; };
+		AD6E5CEE20046B440084EB1E /* MTCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CED20046B440084EB1E /* MTCellProtocol.swift */; };
+		AD6E5CF020046BAF0084EB1E /* MTViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5CEF20046BAF0084EB1E /* MTViewModel.swift */; };
+		AD7D350D200524EB004E0E8A /* MTMovieFeedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D350C200524EB004E0E8A /* MTMovieFeedViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		AD6E5CE6200412A10084EB1E /* MTMovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD6E5CE8200413CE0084EB1E /* MTMovieCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMovieCellViewModel.swift; sourceTree = "<group>"; };
 		AD6E5CEB20045FCD0084EB1E /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		AD6E5CED20046B440084EB1E /* MTCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTCellProtocol.swift; sourceTree = "<group>"; };
+		AD6E5CEF20046BAF0084EB1E /* MTViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTViewModel.swift; sourceTree = "<group>"; };
+		AD7D350C200524EB004E0E8A /* MTMovieFeedViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMovieFeedViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				AD1489FB1FFFAD3400D01259 /* MovieTimeTests.swift */,
+				AD7D350C200524EB004E0E8A /* MTMovieFeedViewModelTests.swift */,
 				AD1489FD1FFFAD3400D01259 /* Info.plist */,
 			);
 			path = MovieTimeTests;
@@ -139,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				AD6E5CD12003C49D0084EB1E /* Services */,
+				AD6E5CEF20046BAF0084EB1E /* MTViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				AD6E5CEA20045FC20084EB1E /* Extensions */,
+				AD6E5CED20046B440084EB1E /* MTCellProtocol.swift */,
 				AD6E5CCB2003AF1B0084EB1E /* MTCoreUtils.swift */,
 				AD6E5CD42003C5180084EB1E /* MTNetworkError.swift */,
 				AD6E5CDA2003D7670084EB1E /* MTServiceHelper.swift */,
@@ -311,8 +320,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD6E5CF020046BAF0084EB1E /* MTViewModel.swift in Sources */,
 				AD6E5CCE2003AF500084EB1E /* MTService.swift in Sources */,
 				AD6E5CEC20045FCD0084EB1E /* UIViewExtensions.swift in Sources */,
+				AD6E5CEE20046B440084EB1E /* MTCellProtocol.swift in Sources */,
 				AD6E5CD92003D43B0084EB1E /* MTMovieDBService.swift in Sources */,
 				AD6E5CE42003FC270084EB1E /* MTSearchMoviesViewController.swift in Sources */,
 				AD6E5CE22003E4E60084EB1E /* MTMoviesFeedViewModel.swift in Sources */,
@@ -333,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD7D350D200524EB004E0E8A /* MTMovieFeedViewModelTests.swift in Sources */,
 				AD1489FC1FFFAD3400D01259 /* MovieTimeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
