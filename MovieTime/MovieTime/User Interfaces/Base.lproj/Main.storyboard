@@ -83,24 +83,24 @@
                                                                                     <rect key="frame" x="0.0" y="4" width="145" height="46"/>
                                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                 </view>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kung Fu Panda 3 (2017)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpk-D9-Y77">
-                                                                                    <rect key="frame" x="5" y="5" width="135" height="18"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kung Fu Panda Kung Fu Panda 3 (03-04-2017)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpk-D9-Y77">
+                                                                                    <rect key="frame" x="5" y="5" width="135" height="25"/>
                                                                                     <constraints>
-                                                                                        <constraint firstAttribute="height" constant="18" id="Xii-Wt-5J1"/>
+                                                                                        <constraint firstAttribute="height" constant="25" id="Xii-Wt-5J1"/>
                                                                                     </constraints>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-movie" translatesAutoresizingMaskIntoConstraints="NO" id="P4O-22-LB6">
-                                                                                    <rect key="frame" x="7" y="30" width="10" height="10"/>
+                                                                                    <rect key="frame" x="5" y="33" width="12" height="12"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" secondItem="P4O-22-LB6" secondAttribute="height" multiplier="1:1" id="6gQ-wL-oEy"/>
                                                                                     </constraints>
                                                                                 </imageView>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action, Animation, Drama + 3" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYp-Yx-KfE">
-                                                                                    <rect key="frame" x="20" y="30" width="120" height="10"/>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                                                    <rect key="frame" x="20" y="35.5" width="120" height="8.5"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="7"/>
                                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
@@ -108,7 +108,7 @@
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <constraints>
                                                                                 <constraint firstItem="Tpk-D9-Y77" firstAttribute="leading" secondItem="7Q9-P0-BDC" secondAttribute="leading" constant="5" id="0WL-1D-3of"/>
-                                                                                <constraint firstAttribute="bottom" secondItem="P4O-22-LB6" secondAttribute="bottom" constant="10" id="43B-2r-r7W"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="P4O-22-LB6" secondAttribute="bottom" constant="5" id="43B-2r-r7W"/>
                                                                                 <constraint firstAttribute="bottom" secondItem="9wz-Wm-F0Q" secondAttribute="bottom" id="46m-6P-BGA"/>
                                                                                 <constraint firstAttribute="trailing" secondItem="9wz-Wm-F0Q" secondAttribute="trailing" id="9kr-2k-sbh"/>
                                                                                 <constraint firstItem="dMu-qa-Arn" firstAttribute="leading" secondItem="7Q9-P0-BDC" secondAttribute="leading" id="GX0-Mw-VCj"/>
@@ -117,12 +117,12 @@
                                                                                 <constraint firstItem="9wz-Wm-F0Q" firstAttribute="top" secondItem="dMu-qa-Arn" secondAttribute="bottom" id="UB0-Pr-g3C"/>
                                                                                 <constraint firstAttribute="trailing" secondItem="Tpk-D9-Y77" secondAttribute="trailing" constant="5" id="YmK-2t-p4y"/>
                                                                                 <constraint firstItem="9wz-Wm-F0Q" firstAttribute="leading" secondItem="7Q9-P0-BDC" secondAttribute="leading" id="dAI-xN-xYb"/>
-                                                                                <constraint firstItem="P4O-22-LB6" firstAttribute="top" secondItem="Tpk-D9-Y77" secondAttribute="bottom" constant="7" id="khO-Si-E3m"/>
+                                                                                <constraint firstItem="P4O-22-LB6" firstAttribute="top" secondItem="Tpk-D9-Y77" secondAttribute="bottom" constant="3" id="khO-Si-E3m"/>
                                                                                 <constraint firstAttribute="trailing" secondItem="AYp-Yx-KfE" secondAttribute="trailing" constant="5" id="lUr-Mr-Pwe"/>
                                                                                 <constraint firstItem="dMu-qa-Arn" firstAttribute="top" secondItem="7Q9-P0-BDC" secondAttribute="top" constant="-2" id="pOG-Vq-6mQ"/>
                                                                                 <constraint firstAttribute="height" constant="50" id="sDx-7j-li2"/>
                                                                                 <constraint firstItem="AYp-Yx-KfE" firstAttribute="leading" secondItem="P4O-22-LB6" secondAttribute="trailing" constant="3" id="u3o-4T-Sdy"/>
-                                                                                <constraint firstItem="P4O-22-LB6" firstAttribute="leading" secondItem="7Q9-P0-BDC" secondAttribute="leading" constant="7" id="xdW-gt-hd2"/>
+                                                                                <constraint firstItem="P4O-22-LB6" firstAttribute="leading" secondItem="7Q9-P0-BDC" secondAttribute="leading" constant="5" id="xdW-gt-hd2"/>
                                                                                 <constraint firstItem="Tpk-D9-Y77" firstAttribute="top" secondItem="7Q9-P0-BDC" secondAttribute="top" constant="5" id="yyR-aa-nsY"/>
                                                                             </constraints>
                                                                         </view>
@@ -221,7 +221,7 @@
                         <action selector="barButtonSearchPressed:" destination="Led-5F-a2D" id="lNO-wh-9Fm"/>
                     </connections>
                 </barButtonItem>
-                <barButtonItem systemItem="organize" id="pY8-UG-Leu">
+                <barButtonItem image="icon-settings" id="pY8-UG-Leu">
                     <connections>
                         <action selector="barButtonSettingsPressed:" destination="Led-5F-a2D" id="ZcB-1e-YMl"/>
                     </connections>
@@ -346,6 +346,7 @@
     </scenes>
     <resources>
         <image name="icon-movie" width="64" height="64"/>
+        <image name="icon-settings" width="23" height="25"/>
         <image name="image-background-frame" width="270" height="8"/>
         <image name="info-background-frame" width="270" height="11"/>
     </resources>

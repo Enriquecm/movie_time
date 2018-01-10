@@ -52,14 +52,14 @@ class MTSplashViewModel: MTViewModel {
     }
 
     private func loadGenres() {
-        movieDbService.requestConfiguration { [weak self] (data, error) in
+        movieDbService.requestGenresList { [weak self] (data, error) in
             guard let data = data, error == nil else {
                 self?.onInformationFailed?(error?.message)
                 return
             }
 
             // Parse Genres
-            let genresParser = MTParser<MTModelMovieDBConfiguration>()
+            let genresParser = MTParser<MTModelMovieDBGenresList>()
             let genres = try? genresParser.parse(from: data, with: genresParser.dateDecodingStrategy())
             if genres != nil {
                 // Save Genres

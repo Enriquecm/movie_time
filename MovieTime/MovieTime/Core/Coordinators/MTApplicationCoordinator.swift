@@ -23,7 +23,7 @@ class MTApplicationCoordinator {
 
     var hasInitialInformation: Bool {
         let hasConfig = configuration != nil
-        let hasGenres = genres != nil
+        let hasGenres = genresList != nil
         return hasConfig && hasGenres
     }
 
@@ -31,8 +31,9 @@ class MTApplicationCoordinator {
         return loadSavedModel(forKey: MTIdentifiers.PersistencyKeys.configuration)
     }
 
-    var genres: MTModelMovieDBGenresList? {
-        return loadSavedModel(forKey: MTIdentifiers.PersistencyKeys.genres)
+    var genresList: MTModelMovieDBGenresList? {
+        let genres: MTModelMovieDBGenresList? = loadSavedModel(forKey: MTIdentifiers.PersistencyKeys.genres)
+        return genres
     }
 
     func saveConfiguration(data: Data) {

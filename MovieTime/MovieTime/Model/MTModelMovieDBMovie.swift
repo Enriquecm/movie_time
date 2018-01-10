@@ -17,6 +17,7 @@ struct MTModelMovieDBMovie: Codable {
     var popularity: Float?
     var poster_path: String?
 
+    var genre_ids: [Int]?
     var backdrop_path: String?
     var release_date: Date?
 }

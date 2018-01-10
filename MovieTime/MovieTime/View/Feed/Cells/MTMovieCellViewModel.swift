@@ -12,7 +12,7 @@ final class MTMovieCellViewModel: MTViewModel {
 
     var title: String {
         let date = releaseDate?.shortDateFormat() ?? "--/--/----"
-        return movieName + "(" + date + ")"
+        return movieName + " (" + date + ")"
     }
 
     var movieName: String {
@@ -32,12 +32,43 @@ final class MTMovieCellViewModel: MTViewModel {
     }
 
     var genres: String? {
-        return ""
+        return loadGenresInformation(for: movie.genre_ids)
     }
 
     private let movie: MTModelMovieDBMovie
 
     init(movie: MTModelMovieDBMovie) {
         self.movie = movie
+    }
+
+    private func loadGenresInformation(for genresIds: [Int]?) -> String? {
+        guard let genresIds = genresIds else { return nil }
+
+        var genresList = [String]()
+        let savedGenres = MTApplicationCoordinator.shared.genresList?.genres
+        for genreId in genresIds {
+            if let genreModel = savedGenres?.filter({ $0.id == genreId }).first,
+                let name = genreModel.name {
+                genresList.append(name)
+            }
+        }
+
+        var genresInformation = ""
+        for (index, genre) in genresList.enumerated() {
+            genresInformation += genre
+
+            if index == 1 && genresList.count > 2 {
+                genresInformation += " and "
+                genresInformation += "+\(genresList.count - index)"
+                break
+            }
+
+            if (index + 2) == genresList.count {
+                genresInformation += " and "
+            } else if (index + 1) != genresList.count {
+                genresInformation += ", "
+            }
+        }
+        return genresInformation
     }
 }
