@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNd-2v-QoB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxX-DY-09N">
+                                        <rect key="frame" x="112.5" y="258.5" width="150" height="150"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-movie" translatesAutoresizingMaskIntoConstraints="NO" id="SFm-RZ-hd5">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="SFm-RZ-hd5" firstAttribute="top" secondItem="lxX-DY-09N" secondAttribute="top" id="BAg-zo-ZeA"/>
+                                            <constraint firstAttribute="trailing" secondItem="SFm-RZ-hd5" secondAttribute="trailing" id="Hsl-2S-8tP"/>
+                                            <constraint firstAttribute="height" constant="150" id="OLp-g3-SrW"/>
+                                            <constraint firstItem="SFm-RZ-hd5" firstAttribute="leading" secondItem="lxX-DY-09N" secondAttribute="leading" id="gZs-FL-nkh"/>
+                                            <constraint firstAttribute="width" constant="150" id="mx5-nU-2wm"/>
+                                            <constraint firstAttribute="bottom" secondItem="SFm-RZ-hd5" secondAttribute="bottom" id="oDo-Y3-6yV"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="lxX-DY-09N" firstAttribute="centerY" secondItem="KNd-2v-QoB" secondAttribute="centerY" id="323-QP-gx3"/>
+                                    <constraint firstItem="lxX-DY-09N" firstAttribute="centerX" secondItem="KNd-2v-QoB" secondAttribute="centerX" id="MDq-zF-x64"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KNd-2v-QoB" secondAttribute="bottom" id="MPl-Mn-uka"/>
+                            <constraint firstItem="KNd-2v-QoB" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Nhp-Cp-USE"/>
+                            <constraint firstItem="KNd-2v-QoB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Owp-Nb-Z0F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KNd-2v-QoB" secondAttribute="trailing" id="eIf-Fy-szx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon-movie" width="64" height="64"/>
+    </resources>
+</document>

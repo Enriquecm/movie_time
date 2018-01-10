@@ -28,6 +28,13 @@ class MTMovieCollectionViewCell: UICollectionViewCell, MTViewModelSetupCellProto
     @IBOutlet weak var imageViewInfoFrame: UIImageView!
     @IBOutlet weak var labelMovieGenres: UILabel!
 
+    // MARK: Properties
+    private var viewModel: MTMovieCellViewModel? {
+        didSet {
+            setupUI()
+        }
+    }
+
     override func layoutSubviews() {
         super.layoutSubviews()
         viewBackground.layer.shadowRadius = 1.0
@@ -36,6 +43,12 @@ class MTMovieCollectionViewCell: UICollectionViewCell, MTViewModelSetupCellProto
     }
 
     func setup(withViewModel viewModel: MTMovieCellViewModel?) {
-        // TODO: 
+        self.viewModel = viewModel
+    }
+
+    private func setupUI() {
+        labelMovieName.text = viewModel?.title
+        labelMovieGenres.text = viewModel?.genres
+        imageViewMovie.loadPosterImage(filePath: viewModel?.posterPath)
     }
 }

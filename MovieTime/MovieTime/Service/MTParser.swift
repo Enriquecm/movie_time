@@ -18,8 +18,7 @@ final class MTParser<T> where T: Decodable {
     }
 
     func dateDecodingStrategy() -> JSONDecoder.DateDecodingStrategy {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateFormatter = DateHelper.shared.serviceDateFormatter
         return .formatted(dateFormatter)
     }
 }

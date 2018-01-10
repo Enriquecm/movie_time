@@ -103,7 +103,7 @@ final class MTMoviesFeedViewModel: MTViewModel {
     }
 
     func data(for indexPath: IndexPath) -> MTMovieCellViewModel? {
-        guard isLoadingIndexPath(indexPath) else { return nil }
+        guard !isLoadingIndexPath(indexPath) else { return nil }
 
         let row = indexPath.row
         guard row < dataSource.count else { return nil }
@@ -111,7 +111,7 @@ final class MTMoviesFeedViewModel: MTViewModel {
     }
 
     func didSelectItem(at indexPath: IndexPath) {
-        guard isLoadingIndexPath(indexPath) else { return }
+        guard !isLoadingIndexPath(indexPath) else { return }
 
         guard let movie = data(for: indexPath) else { return }
         onMovieSelected?(movie)

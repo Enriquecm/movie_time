@@ -10,7 +10,34 @@ import Foundation
 
 final class MTMovieCellViewModel: MTViewModel {
 
+    var title: String {
+        let date = releaseDate?.shortDateFormat() ?? "--/--/----"
+        return movieName + "(" + date + ")"
+    }
+
+    var movieName: String {
+        return movie.title ?? "--"
+    }
+
+    var posterPath: String? {
+        return movie.poster_path
+    }
+
+    var backdropPath: String? {
+        return movie.backdrop_path
+    }
+
+    var releaseDate: Date? {
+        return movie.release_date
+    }
+
+    var genres: String? {
+        return ""
+    }
+
+    private let movie: MTModelMovieDBMovie
+
     init(movie: MTModelMovieDBMovie) {
-        // TODO:
+        self.movie = movie
     }
 }

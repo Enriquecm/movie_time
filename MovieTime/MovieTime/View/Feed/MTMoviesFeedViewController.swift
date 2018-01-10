@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MTMoviesFeedViewController: UIViewController {
+class MTMoviesFeedViewController: MTViewController {
 
     // MARK: Outlets
     @IBOutlet weak var collectionView: UICollectionView!
@@ -26,7 +26,9 @@ class MTMoviesFeedViewController: UIViewController {
     @IBOutlet weak var barButtonSearch: UIBarButtonItem!
 
     // MARK: Properties
-    fileprivate let viewModel = MTMoviesFeedViewModel()
+    fileprivate lazy var viewModel: MTMoviesFeedViewModel = {
+        return baseViewModel as? MTMoviesFeedViewModel ?? MTMoviesFeedViewModel()
+    }()
 
     private let refreshControl = MTRefreshControl()
     private var searchBar: UISearchBar?
@@ -45,8 +47,8 @@ class MTMoviesFeedViewController: UIViewController {
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
         collectionView.reloadData()
+        super.viewWillTransition(to: size, with: coordinator)
     }
 
     // MARK: Methods
@@ -81,7 +83,8 @@ class MTMoviesFeedViewController: UIViewController {
 
         viewModel.onDataSourceFailed = { [weak self] errorMessage in
             DispatchQueue.main.async {
-                self?.showAlert(withTitle: "Failed to load movies.", message: errorMessage)
+                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                self?.showAlert(with: "Failed to load movies.", message: errorMessage, action: action)
                 self?.refreshControl.endRefreshing()
             }
         }
@@ -135,12 +138,6 @@ class MTMoviesFeedViewController: UIViewController {
             self.navigationItem.setLeftBarButton(nil, animated: true)
             self.navigationItem.setRightBarButton(nil, animated: true)
         }
-    }
-
-    func showAlert(withTitle title: String, message: String?) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
     }
 }
 
@@ -202,7 +199,7 @@ extension MTMoviesFeedViewController: UICollectionViewDelegateFlowLayout {
 
         // Half of width
         let width = totalWidth / 2
-        let height = 1.5 * width - MTMovieCollectionViewCell.informationHeight
+        let height = 1.5 * width + MTMovieCollectionViewCell.informationHeight
         return CGSize(width: width, height: height)
     }
 
