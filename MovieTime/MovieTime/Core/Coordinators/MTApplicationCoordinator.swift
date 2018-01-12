@@ -23,7 +23,7 @@ class MTApplicationCoordinator {
 
     var hasInitialInformation: Bool {
         let hasConfig = configuration != nil
-        let hasGenres = genresList != nil
+        let hasGenres = genresList?.genres != nil
         return hasConfig && hasGenres
     }
 

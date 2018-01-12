@@ -29,7 +29,7 @@ class MTMovieCollectionViewCell: UICollectionViewCell, MTViewModelSetupCellProto
     @IBOutlet weak var labelMovieGenres: UILabel!
 
     // MARK: Properties
-    private var viewModel: MTMovieCellViewModel? {
+    private var viewModel: MTMovieViewModel? {
         didSet {
             setupUI()
         }
@@ -42,13 +42,13 @@ class MTMovieCollectionViewCell: UICollectionViewCell, MTViewModelSetupCellProto
         viewBackground.layer.shadowOpacity = 0.7
     }
 
-    func setup(withViewModel viewModel: MTMovieCellViewModel?) {
+    func setup(withViewModel viewModel: MTMovieViewModel?) {
         self.viewModel = viewModel
     }
 
     private func setupUI() {
         labelMovieName.text = viewModel?.title
-        labelMovieGenres.text = viewModel?.genres
+        labelMovieGenres.text = viewModel?.genres(shrinkAt: 1)
         imageViewMovie.loadPosterImage(filePath: viewModel?.posterPath)
     }
 }

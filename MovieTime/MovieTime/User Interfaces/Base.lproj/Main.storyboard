@@ -21,7 +21,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWn-2h-NHV">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t92-v2-N4Z">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t92-v2-N4Z">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="n6a-5m-EiU">
@@ -235,17 +235,20 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6PH-8i-ThI">
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="70"/>
-                                    <color key="backgroundColor" red="0.4429605901" green="0.4507442713" blue="0.45897263290000001" alpha="0.59010036499999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="150" id="TnU-LZ-rmi"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="TnU-LZ-rmi"/>
                                     </constraints>
-                                    <state key="normal" title="Button"/>
+                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="16"/>
+                                    <state key="normal" title="Upcoming Movies">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
                                     <connections>
                                         <action selector="dropDownMenuPressed:" destination="Led-5F-a2D" eventType="touchUpInside" id="TVy-4W-nnx"/>
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" red="0.95548957590000005" green="0.67006939649999997" blue="0.20421165229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="6PH-8i-ThI" firstAttribute="leading" secondItem="sbv-6V-QcZ" secondAttribute="leading" id="Lhk-RN-Kg5"/>
                                 <constraint firstAttribute="bottom" secondItem="6PH-8i-ThI" secondAttribute="bottom" id="Rg4-xX-MS3"/>
@@ -254,7 +257,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="sbv-6V-QcZ" firstAttribute="leading" secondItem="cCF-J2-DZQ" secondAttribute="leading" id="3ZF-8u-cMi"/>
                         <constraint firstItem="sbv-6V-QcZ" firstAttribute="top" secondItem="cCF-J2-DZQ" secondAttribute="top" id="Hfc-5b-Qyk"/>
@@ -323,7 +326,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SKW-7Z-GXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="465" y="1700.7042253521126"/>
+            <point key="canvasLocation" x="-371" y="224"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pom-Gx-rRN">

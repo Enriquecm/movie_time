@@ -14,11 +14,18 @@ struct MTIdentifiers {
         struct Main {
             static let name = "Main"
         }
+
+        struct Movie {
+            static let name = "Movie"
+        }
+
+        struct Settings {
+            static let name = "Settings"
+        }
     }
 
     struct RootViewController {
         static let splash = "MTSplashViewController"
-        static let feed = "MTMoviesFeedViewController"
         static let feedNavigation = "MTMoviesFeedNavigationController"
     }
 

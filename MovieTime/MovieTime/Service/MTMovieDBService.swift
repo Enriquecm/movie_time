@@ -14,6 +14,7 @@ protocol MTMovieDBServiceProtocol: class {
     func requestConfiguration(completion: ((Data?, MTNetworkError?) -> Void)?)
     func requestGenresList(completion: ((Data?, MTNetworkError?) -> Void)?)
     func requestUpcomingMovies(forPage page: Int, completion: ((Data?, MTNetworkError?) -> Void)?)
+    func requestMovieDetail(forId movieId: Int, completion: ((Data?, MTNetworkError?) -> Void)?)
 }
 
 final class MTMovieDBService: MTMovieDBServiceProtocol {
@@ -56,6 +57,16 @@ final class MTMovieDBService: MTMovieDBServiceProtocol {
         let parameters: MTParameters = ["api_key": apiKey,
                                         "language": language,
                                         "page": page]
+        let url = urlServer?.appendingPathComponent(endpoint)
+
+        executeRequest(url: url, method: .get, parameters: parameters, completion: completion)
+    }
+
+    func requestMovieDetail(forId movieId: Int, completion: ((Data?, MTNetworkError?) -> Void)?) {
+
+        let endpoint = "/movie/\(movieId)"
+        let parameters: MTParameters = ["api_key": apiKey,
+                                        "language": language]
         let url = urlServer?.appendingPathComponent(endpoint)
 
         executeRequest(url: url, method: .get, parameters: parameters, completion: completion)

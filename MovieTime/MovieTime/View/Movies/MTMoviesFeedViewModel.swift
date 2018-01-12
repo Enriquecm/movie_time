@@ -19,13 +19,13 @@ final class MTMoviesFeedViewModel: MTViewModel {
 
     private var movies: [MTModelMovieDBMovie] = [] {
         didSet {
-            var viewModels = [MTMovieCellViewModel]()
-            movies.forEach({ viewModels.append(MTMovieCellViewModel(movie: $0)) })
+            var viewModels = [MTMovieViewModel]()
+            movies.forEach({ viewModels.append(MTMovieViewModel(movie: $0, service: movieDbService)) })
             dataSource = viewModels
         }
     }
 
-    private(set) var dataSource: [MTMovieCellViewModel] = [] {
+    private(set) var dataSource: [MTMovieViewModel] = [] {
         didSet {
             onDataSourceChanged?()
         }
@@ -36,7 +36,7 @@ final class MTMoviesFeedViewModel: MTViewModel {
     // MARK: Reactors
     var onDataSourceChanged: (() -> Void)?
     var onDataSourceFailed: ((String?) -> Void)?
-    var onMovieSelected: ((MTMovieCellViewModel) -> Void)?
+    var onMovieSelected: ((MTMovieViewModel) -> Void)?
 
     internal let movieDbService: MTMovieDBServiceProtocol
 
@@ -102,7 +102,7 @@ final class MTMoviesFeedViewModel: MTViewModel {
         }
     }
 
-    func data(for indexPath: IndexPath) -> MTMovieCellViewModel? {
+    func data(for indexPath: IndexPath) -> MTMovieViewModel? {
         guard !isLoadingIndexPath(indexPath) else { return nil }
 
         let row = indexPath.row

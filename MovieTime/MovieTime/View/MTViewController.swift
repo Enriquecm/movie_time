@@ -12,6 +12,7 @@ class MTViewController: UIViewController {
 
     // MARK: Properties
     private(set) var baseViewModel: MTViewModel?
+
     class var identifier: String {
         return String(describing: self)
     }

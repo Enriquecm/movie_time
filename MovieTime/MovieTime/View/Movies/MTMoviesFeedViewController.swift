@@ -88,6 +88,11 @@ class MTMoviesFeedViewController: MTViewController {
                 self?.refreshControl.endRefreshing()
             }
         }
+
+        viewModel.onMovieSelected = { [weak self] movieViewModel in
+            self?.showMovieDetail(movieViewModel)
+        }
+
         refreshControl.beginRefreshing()
         viewModel.loadFeed()
     }
@@ -111,7 +116,7 @@ class MTMoviesFeedViewController: MTViewController {
 
     // MARK: Actions
     @IBAction func barButtonSettingsPressed(_ sender: UIBarButtonItem) {
-        // TODO: Go to settings
+        showSettings()
     }
 
     @IBAction func barButtonSearchPressed(_ sender: UIBarButtonItem) {
@@ -138,6 +143,16 @@ class MTMoviesFeedViewController: MTViewController {
             self.navigationItem.setLeftBarButton(nil, animated: true)
             self.navigationItem.setRightBarButton(nil, animated: true)
         }
+    }
+
+    // MARK: Navigation Methods
+    private func showSettings() {
+        // Go To Settings
+    }
+
+    private func showMovieDetail(_ movieViewModel: MTMovieViewModel) {
+        let viewController = MTMovieDetailViewController.initializeViewController(viewModel: movieViewModel)
+        present(viewController, animated: true, completion: nil)
     }
 }
 
