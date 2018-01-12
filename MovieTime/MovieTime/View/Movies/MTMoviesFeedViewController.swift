@@ -125,14 +125,19 @@ class MTMoviesFeedViewController: MTViewController {
     }
 
     @IBAction func dropDownMenuPressed(_ sender: UIButton) {
-        // TODO: Show Drop down menu
+        // TODO: Show Drop down menu with other options:
+        // - Upcoming movies
+        // - Top Rated
+        // - Popular
+        // - Now Playing
     }
 
     // MARK: Helpers
     fileprivate func setupForNoSearching() {
         UIView.animate(withDuration: 0.5) {
             self.navigationItem.titleView = self.viewDropDownMenu
-            self.navigationItem.setLeftBarButton(self.barButtonSettings, animated: true)
+            // TODO: Created settings screen
+            // self.navigationItem.setLeftBarButton(self.barButtonSettings, animated: true)
             self.navigationItem.setRightBarButton(self.barButtonSearch, animated: true)
         }
     }
@@ -147,7 +152,9 @@ class MTMoviesFeedViewController: MTViewController {
 
     // MARK: Navigation Methods
     private func showSettings() {
-        // Go To Settings
+        let viewModel = MTSettingsViewModel()
+        let viewController = MTSettingsViewController.initializeViewController(viewModel: viewModel)
+        present(viewController, animated: true, completion: nil)
     }
 
     private func showMovieDetail(_ movieViewModel: MTMovieViewModel) {

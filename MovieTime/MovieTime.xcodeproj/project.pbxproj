@@ -43,6 +43,8 @@
 		AD7D351320054D63004E0E8A /* MTParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D351220054D63004E0E8A /* MTParser.swift */; };
 		AD7D35152005580C004E0E8A /* MTLoadingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D35142005580C004E0E8A /* MTLoadingCollectionViewCell.swift */; };
 		AD7D351820056C6B004E0E8A /* MTRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7D351720056C6B004E0E8A /* MTRefreshControl.swift */; };
+		AD8A19F9200874BF003F52FD /* MTSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8A19F8200874BF003F52FD /* MTSettingsViewController.swift */; };
+		AD8A19FB20087523003F52FD /* MTSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8A19FA20087523003F52FD /* MTSettingsViewModel.swift */; };
 		AD9303B02005D34900702A34 /* MTModelMovieDBGenresList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9303AF2005D34900702A34 /* MTModelMovieDBGenresList.swift */; };
 		AD9303B22005D35B00702A34 /* MTModelMovieDBGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9303B12005D35B00702A34 /* MTModelMovieDBGenre.swift */; };
 		AD9303B52006420100702A34 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9303B42006420100702A34 /* DateHelper.swift */; };
@@ -106,6 +108,8 @@
 		AD7D351220054D63004E0E8A /* MTParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTParser.swift; sourceTree = "<group>"; };
 		AD7D35142005580C004E0E8A /* MTLoadingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTLoadingCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD7D351720056C6B004E0E8A /* MTRefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTRefreshControl.swift; sourceTree = "<group>"; };
+		AD8A19F8200874BF003F52FD /* MTSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTSettingsViewController.swift; sourceTree = "<group>"; };
+		AD8A19FA20087523003F52FD /* MTSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTSettingsViewModel.swift; sourceTree = "<group>"; };
 		AD9303AF2005D34900702A34 /* MTModelMovieDBGenresList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTModelMovieDBGenresList.swift; sourceTree = "<group>"; };
 		AD9303B12005D35B00702A34 /* MTModelMovieDBGenre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTModelMovieDBGenre.swift; sourceTree = "<group>"; };
 		AD9303B42006420100702A34 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 		AD148A081FFFB53A00D01259 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AD8A19F7200874A7003F52FD /* Settings */,
 				AD1489E81FFFAD3400D01259 /* MTViewController.swift */,
 				AD9303AE2005CF6E00702A34 /* Splash */,
 				AD6E5CDE2003E4B00084EB1E /* Movies */,
@@ -291,6 +296,15 @@
 				AD7D351720056C6B004E0E8A /* MTRefreshControl.swift */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		AD8A19F7200874A7003F52FD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AD8A19FA20087523003F52FD /* MTSettingsViewModel.swift */,
+				AD8A19F8200874BF003F52FD /* MTSettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		AD9303AE2005CF6E00702A34 /* Splash */ = {
@@ -460,6 +474,7 @@
 				AD7D351320054D63004E0E8A /* MTParser.swift in Sources */,
 				AD6E5CE9200413CE0084EB1E /* MTMovieViewModel.swift in Sources */,
 				AD1489E91FFFAD3400D01259 /* MTViewController.swift in Sources */,
+				AD8A19F9200874BF003F52FD /* MTSettingsViewController.swift in Sources */,
 				AD9303B02005D34900702A34 /* MTModelMovieDBGenresList.swift in Sources */,
 				AD321A61200671BF003F6172 /* MTApplicationCoordinator.swift in Sources */,
 				AD6E5CD52003C5180084EB1E /* MTNetworkError.swift in Sources */,
@@ -470,6 +485,7 @@
 				AD9303C020065FF100702A34 /* MTRouter.swift in Sources */,
 				AD6E5CD72003CEA80084EB1E /* MTParameterEncoding.swift in Sources */,
 				AD6E5CDB2003D7670084EB1E /* MTServiceHelper.swift in Sources */,
+				AD8A19FB20087523003F52FD /* MTSettingsViewModel.swift in Sources */,
 				AD497E832007C6B20081C528 /* MTMovieDetailViewController.swift in Sources */,
 				AD6E5CE7200412A10084EB1E /* MTMovieCollectionViewCell.swift in Sources */,
 				AD1489E71FFFAD3400D01259 /* AppDelegate.swift in Sources */,

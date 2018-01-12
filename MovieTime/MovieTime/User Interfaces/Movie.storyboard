@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -279,8 +280,8 @@
                                         <exclude reference="NyF-JQ-gJd"/>
                                         <exclude reference="fKB-Tj-cC4"/>
                                         <exclude reference="i5I-XD-r6B"/>
-                                        <exclude reference="nCK-uo-0nr"/>
                                         <exclude reference="P5n-PR-p1o"/>
+                                        <exclude reference="nCK-uo-0nr"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
@@ -301,10 +302,10 @@
                                         <exclude reference="m2K-IB-sbA"/>
                                         <exclude reference="FT2-kb-4z3"/>
                                         <include reference="i5I-XD-r6B"/>
-                                        <exclude reference="Jxq-mY-mhN"/>
-                                        <include reference="nCK-uo-0nr"/>
                                         <include reference="P5n-PR-p1o"/>
                                         <exclude reference="sUi-62-D6q"/>
+                                        <exclude reference="Jxq-mY-mhN"/>
+                                        <include reference="nCK-uo-0nr"/>
                                     </mask>
                                 </variation>
                             </view>
